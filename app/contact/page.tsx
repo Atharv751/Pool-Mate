@@ -1,11 +1,5 @@
-"use client"
-
-import type React from "react"
-
-import { useState } from "react"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import { Card, CardContent } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Card, CardContent } from "@/components/ui/card"
@@ -13,14 +7,6 @@ import { Label } from "@/components/ui/label"
 import { MapPin, Phone, Mail, Clock, Send } from "lucide-react"
 
 export default function ContactPage() {
-  const [formSubmitted, setFormSubmitted] = useState(false)
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
-    // In a real application, you would handle the form submission here
-    setFormSubmitted(true)
-  }
-
   return (
     <div className="container py-8">
       <div className="mx-auto max-w-3xl text-center">

@@ -1,283 +1,232 @@
-import Link from "next/link"
+import type React from "react"
 import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Shield, Bell, MessageSquare, UserCheck, MapPin, Star } from "lucide-react"
+import { Card, CardContent } from "@/components/ui/card"
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
+import { Badge } from "@/components/ui/badge"
+import { Shield, Users, Bell, MessageCircle, Star } from "lucide-react"
+import Link from "next/link"
+import Image from "next/image"
 
 export default function WomenOnlyPage() {
   return (
-    <div className="flex flex-col min-h-screen">
-      {/* Hero Section */}
-      <section className="hero-gradient py-16 md:py-24">
-        <div className="container mx-auto px-4 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <div>
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              Women-Only Mode: <span className="text-primary">Safety First</span>
-            </h1>
-            <p className="text-lg md:text-xl text-muted-foreground mb-8">
-              Travel with complete peace of mind with our exclusive Women-Only Mode, designed specifically for female
-              passengers with verified female drivers.
-            </p>
-            <Button size="lg" asChild>
-              <Link href="/how-it-works">Try Women-Only Mode</Link>
-            </Button>
-          </div>
-          <div className="relative">
-            <div className="aspect-video rounded-lg overflow-hidden shadow-xl">
-              <img
-                src="/placeholder.svg?height=600&width=800"
-                alt="Women-Only Mode"
-                className="w-full h-full object-cover"
-              />
+    <div>
+      <section className="relative bg-pink-500 py-16 text-white">
+        <div className="container relative z-10">
+          <div className="grid gap-8 md:grid-cols-2 md:items-center">
+            <div>
+              <Badge className="mb-4 bg-white text-pink-500 hover:bg-white/90">Women-Only Mode</Badge>
+              <h1 className="mb-4 text-3xl font-bold md:text-4xl lg:text-5xl">Safe Carpooling for Women</h1>
+              <p className="mb-6 text-lg">
+                Travel with confidence in our exclusive Women-Only Mode. Connect with verified female drivers and
+                passengers for a secure and comfortable journey.
+              </p>
+              <div className="flex flex-col space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
+                <Button asChild size="lg" variant="secondary" className="bg-white text-pink-500 hover:bg-white/90">
+                  <Link href="/find-ride">Find a Women-Only Ride</Link>
+                </Button>
+                <Button
+                  asChild
+                  size="lg"
+                  variant="outline"
+                  className="border-2 border-white bg-transparent text-white hover:bg-white hover:text-pink-500"
+                >
+                  <Link href="/join-driver">Join as a Female Driver</Link>
+                </Button>
+              </div>
+            </div>
+            <div className="relative h-64 overflow-hidden rounded-lg md:h-96">
+              <Image src="/placeholder.svg?height=600&width=800" alt="Women carpooling" fill className="object-cover" />
             </div>
           </div>
         </div>
       </section>
 
-      {/* Safety Features */}
-      <section className="py-16 md:py-24">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Safety Features for Women</h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Our Women-Only Mode comes with enhanced safety features designed to provide a secure travel experience for
-              female passengers.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[
-              {
-                icon: <UserCheck className="h-10 w-10 text-primary" />,
-                title: "Verified Female Drivers",
-                description:
-                  "All drivers in Women-Only Mode are verified females who undergo additional background checks and in-person verification.",
-              },
-              {
-                icon: <Shield className="h-10 w-10 text-primary" />,
-                title: "Enhanced Security",
-                description:
-                  "Additional security measures including regular driver audits, safety training, and stricter verification protocols.",
-              },
-              {
-                icon: <MapPin className="h-10 w-10 text-primary" />,
-                title: "Live Location Sharing",
-                description:
-                  "Share your ride details and real-time location with trusted contacts who can monitor your entire journey.",
-              },
-              {
-                icon: <Bell className="h-10 w-10 text-primary" />,
-                title: "Emergency Alert System",
-                description:
-                  "One-tap SOS button that immediately alerts emergency contacts and our 24/7 safety response team.",
-              },
-              {
-                icon: <MessageSquare className="h-10 w-10 text-primary" />,
-                title: "Secure In-App Chat",
-                description:
-                  "Communicate with your driver through our secure in-app messaging system without sharing personal contact details.",
-              },
-              {
-                icon: <Star className="h-10 w-10 text-primary" />,
-                title: "Women-Only Ratings",
-                description:
-                  "Exclusive rating system where female passengers rate female drivers, ensuring high service standards.",
-              },
-            ].map((feature, index) => (
-              <Card key={index} className="border-none shadow-md hover:shadow-lg transition-shadow">
-                <CardHeader>
-                  <div className="mb-2">{feature.icon}</div>
-                  <CardTitle>{feature.title}</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <CardDescription className="text-base">{feature.description}</CardDescription>
-                </CardContent>
-              </Card>
-            ))}
+      <section className="py-16">
+        <div className="container">
+          <h2 className="mb-12 text-center text-3xl font-bold md:text-4xl">Why Choose Women-Only Mode?</h2>
+          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+            <FeatureCard
+              icon={<Shield className="h-12 w-12 text-pink-500" />}
+              title="Enhanced Safety"
+              description="Travel exclusively with verified female drivers and passengers for added security and peace of mind."
+            />
+            <FeatureCard
+              icon={<Users className="h-12 w-12 text-pink-500" />}
+              title="Verified Profiles"
+              description="All women in our network undergo thorough verification, including government ID and background checks."
+            />
+            <FeatureCard
+              icon={<Bell className="h-12 w-12 text-pink-500" />}
+              title="Emergency Support"
+              description="Access 24/7 emergency assistance with our dedicated SOS button and real-time ride tracking."
+            />
+            <FeatureCard
+              icon={<MessageCircle className="h-12 w-12 text-pink-500" />}
+              title="Community Support"
+              description="Join a supportive community of women helping each other commute safely and affordably."
+            />
           </div>
         </div>
       </section>
 
-      {/* How It Works */}
-      <section className="py-16 md:py-24 bg-muted">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">How Women-Only Mode Works</h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              A simple process designed to provide maximum safety and convenience for female passengers.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            {[
-              {
-                step: "1",
-                title: "Enable Women-Only Mode",
-                description:
-                  "Toggle the Women-Only Mode option in your app settings to exclusively match with female drivers.",
-              },
-              {
-                step: "2",
-                title: "Book Your Ride",
-                description: "Request an instant ride or schedule in advance, just like you would with regular rides.",
-              },
-              {
-                step: "3",
-                title: "Verify Your Driver",
-                description: "Check your driver's profile and verification badge before getting in the car.",
-              },
-              {
-                step: "4",
-                title: "Travel Safely",
-                description: "Enjoy your ride with the added peace of mind that comes with Women-Only Mode.",
-              },
-            ].map((step, index) => (
-              <div key={index} className="relative">
-                <div className="bg-background rounded-lg p-6 shadow-md h-full">
-                  <div className="w-12 h-12 rounded-full bg-primary flex items-center justify-center text-primary-foreground font-bold text-lg mb-4">
-                    {step.step}
-                  </div>
-                  <h3 className="text-xl font-semibold mb-2">{step.title}</h3>
-                  <p className="text-muted-foreground">{step.description}</p>
-                </div>
-                {index < 3 && (
-                  <div className="hidden md:block absolute top-1/2 -right-4 transform -translate-y-1/2">
-                    <svg
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                      className="text-primary"
-                    >
-                      <path
-                        d="M5 12H19M19 12L12 5M19 12L12 19"
-                        stroke="currentColor"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      />
-                    </svg>
-                  </div>
-                )}
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Testimonials */}
-      <section className="py-16 md:py-24">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">What Women Say About Us</h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Hear from women who use our Women-Only Mode for their daily commutes.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[
-              {
-                name: "Priya Sharma",
-                role: "Marketing Professional",
-                image: "/placeholder.svg?height=100&width=100",
-                quote:
-                  "As a woman who often works late, safety is my top priority. The Women-Only Mode gives me peace of mind during my evening commutes.",
-              },
-              {
-                name: "Ananya Patel",
-                role: "College Student",
-                image: "/placeholder.svg?height=100&width=100",
-                quote:
-                  "I feel so much more comfortable using the Women-Only Mode, especially when traveling to new areas of the city for classes.",
-              },
-              {
-                name: "Meera Kapoor",
-                role: "Healthcare Worker",
-                image: "/placeholder.svg?height=100&width=100",
-                quote:
-                  "With night shifts at the hospital, Women-Only Mode has been a blessing. I can rest during the ride without worrying about safety.",
-              },
-            ].map((testimonial, index) => (
-              <Card key={index} className="border-none shadow-md">
-                <CardContent className="pt-6">
-                  <div className="flex flex-col items-center text-center">
-                    <div className="w-16 h-16 rounded-full overflow-hidden mb-4">
-                      <img
-                        src={testimonial.image || "/placeholder.svg"}
-                        alt={testimonial.name}
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
-                    <div className="mb-4">
-                      <div className="flex justify-center mb-2">
-                        {[...Array(5)].map((_, i) => (
-                          <Star key={i} className="h-5 w-5 text-yellow-500 fill-yellow-500" />
-                        ))}
-                      </div>
-                      <p className="italic mb-4">"{testimonial.quote}"</p>
-                      <h4 className="font-semibold">{testimonial.name}</h4>
-                      <p className="text-sm text-muted-foreground">{testimonial.role}</p>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Safety Stats */}
-      <section className="py-16 md:py-24 road-pattern text-white">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Safety By The Numbers</h2>
-            <p className="text-lg opacity-90 max-w-2xl mx-auto">
-              Our commitment to women's safety is reflected in our statistics.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            {[
-              {
-                value: "100%",
-                label: "Verified Female Drivers",
-              },
-              {
-                value: "24/7",
-                label: "Safety Support",
-              },
-              {
-                value: "98%",
-                label: "Safety Rating",
-              },
-              {
-                value: "50,000+",
-                label: "Women-Only Rides Monthly",
-              },
-            ].map((stat, index) => (
-              <div key={index} className="text-center p-6 bg-white/10 rounded-lg backdrop-blur-sm">
-                <div className="text-4xl md:text-5xl font-bold mb-2 text-white">{stat.value}</div>
-                <div className="text-lg opacity-90">{stat.label}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-16 md:py-24">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Experience Safer Travel?</h2>
-          <p className="text-lg md:text-xl mb-8 max-w-2xl mx-auto text-muted-foreground">
-            Join thousands of women who trust POOL MATE's Women-Only Mode for their daily commutes.
+      <section className="bg-muted py-16">
+        <div className="container">
+          <h2 className="mb-4 text-center text-3xl font-bold md:text-4xl">How It Works</h2>
+          <p className="mx-auto mb-12 max-w-2xl text-center text-muted-foreground">
+            Our Women-Only Mode is designed to provide a safe and comfortable carpooling experience
           </p>
-          <Button size="lg" asChild>
-            <Link href="/how-it-works">Try Women-Only Mode Today</Link>
-          </Button>
+
+          <div className="grid gap-8 md:grid-cols-3">
+            <div className="flex flex-col items-center text-center">
+              <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-pink-500 text-2xl font-bold text-white">
+                1
+              </div>
+              <h3 className="mb-2 text-xl font-semibold">Enable Women-Only Mode</h3>
+              <p className="text-muted-foreground">
+                Toggle the Women-Only Mode option when searching for a ride or offering one as a driver.
+              </p>
+            </div>
+            <div className="flex flex-col items-center text-center">
+              <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-pink-500 text-2xl font-bold text-white">
+                2
+              </div>
+              <h3 className="mb-2 text-xl font-semibold">Connect with Verified Women</h3>
+              <p className="text-muted-foreground">
+                Browse and connect with verified female drivers or passengers going your way.
+              </p>
+            </div>
+            <div className="flex flex-col items-center text-center">
+              <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-pink-500 text-2xl font-bold text-white">
+                3
+              </div>
+              <h3 className="mb-2 text-xl font-semibold">Travel Safely</h3>
+              <p className="text-muted-foreground">
+                Enjoy a secure journey with real-time tracking and emergency support features.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16">
+        <div className="container">
+          <h2 className="mb-12 text-center text-3xl font-bold md:text-4xl">Testimonials from Women Riders</h2>
+
+          <Tabs defaultValue="passengers" className="mx-auto max-w-3xl">
+            <TabsList className="grid w-full grid-cols-2">
+              <TabsTrigger value="passengers">Passengers</TabsTrigger>
+              <TabsTrigger value="drivers">Drivers</TabsTrigger>
+            </TabsList>
+            <TabsContent value="passengers" className="mt-6">
+              <div className="grid gap-6 md:grid-cols-2">
+                <TestimonialCard
+                  name="Priya Sharma"
+                  role="Marketing Executive"
+                  image="/placeholder.svg?height=100&width=100"
+                  quote="As a woman who often works late, POOL MATE's Women-Only Mode has been a game-changer for me. I feel completely safe and have made some great friends during my daily commute."
+                  rating={5}
+                />
+                <TestimonialCard
+                  name="Anjali Patel"
+                  role="College Student"
+                  image="/placeholder.svg?height=100&width=100"
+                  quote="The Women-Only Mode gives me and my parents peace of mind when I travel to college. The drivers are professional, and I've never had any safety concerns."
+                  rating={5}
+                />
+              </div>
+            </TabsContent>
+            <TabsContent value="drivers" className="mt-6">
+              <div className="grid gap-6 md:grid-cols-2">
+                <TestimonialCard
+                  name="Meera Reddy"
+                  role="Part-time Driver"
+                  image="/placeholder.svg?height=100&width=100"
+                  quote="Driving for POOL MATE's Women-Only Mode has been a rewarding experience. I feel like I'm helping other women travel safely while earning extra income on my daily commute."
+                  rating={5}
+                />
+                <TestimonialCard
+                  name="Sunita Gupta"
+                  role="Full-time Driver"
+                  image="/placeholder.svg?height=100&width=100"
+                  quote="The verification process was thorough, which I appreciate as it ensures safety for everyone. My passengers often tell me how much they value this service."
+                  rating={4}
+                />
+              </div>
+            </TabsContent>
+          </Tabs>
+        </div>
+      </section>
+
+      <section className="bg-pink-500 py-16 text-white">
+        <div className="container text-center">
+          <h2 className="mb-6 text-3xl font-bold md:text-4xl">Ready to Experience Safer Carpooling?</h2>
+          <p className="mx-auto mb-8 max-w-2xl text-lg">
+            Join thousands of women who are already enjoying safe and comfortable rides with POOL MATE's Women-Only
+            Mode.
+          </p>
+          <div className="flex flex-col items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
+            <Button asChild size="lg" variant="secondary" className="bg-white text-pink-500 hover:bg-white/90">
+              <Link href="/find-ride">Find a Women-Only Ride</Link>
+            </Button>
+            <Button
+              asChild
+              size="lg"
+              variant="outline"
+              className="border-2 border-white bg-transparent text-white hover:bg-white hover:text-pink-500"
+            >
+              <Link href="/join-driver">Join as a Female Driver</Link>
+            </Button>
+          </div>
         </div>
       </section>
     </div>
+  )
+}
+
+function FeatureCard({ icon, title, description }: { icon: React.ReactNode; title: string; description: string }) {
+  return (
+    <div className="flex flex-col items-center text-center">
+      <div className="mb-4">{icon}</div>
+      <h3 className="mb-2 text-xl font-semibold">{title}</h3>
+      <p className="text-muted-foreground">{description}</p>
+    </div>
+  )
+}
+
+interface TestimonialCardProps {
+  name: string
+  role: string
+  image: string
+  quote: string
+  rating: number
+}
+
+function TestimonialCard({ name, role, image, quote, rating }: TestimonialCardProps) {
+  return (
+    <Card>
+      <CardContent className="p-6">
+        <div className="mb-4 flex">
+          {Array.from({ length: 5 }).map((_, i) => (
+            <Star
+              key={i}
+              className={`h-4 w-4 ${i < rating ? "fill-yellow-500 text-yellow-500" : "text-muted-foreground"}`}
+            />
+          ))}
+        </div>
+        <p className="mb-6 text-muted-foreground">{quote}</p>
+        <div className="flex items-center gap-3">
+          <Avatar>
+            <AvatarImage src={image} alt={name} />
+            <AvatarFallback>{name.charAt(0)}</AvatarFallback>
+          </Avatar>
+          <div>
+            <div className="font-medium">{name}</div>
+            <div className="text-sm text-muted-foreground">{role}</div>
+          </div>
+        </div>
+      </CardContent>
+    </Card>
   )
 }
 
