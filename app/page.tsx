@@ -23,14 +23,11 @@ export default function Home() {
         </div>
         <div className="container relative z-10 flex h-full flex-col items-center justify-center text-center text-white">
           <h1 className="mb-6 text-4xl font-bold leading-tight md:text-6xl">
-            Ride Smart. Save More.
+            POOL MATE: Transforming 
             <br />
-            Travel Better with POOL MATE!
+            Commutes Into Cost Efficient Adventures!
           </h1>
-          <p className="mb-8 max-w-2xl text-lg md:text-xl">
-            Join thousands of commuters who are saving money, reducing their carbon footprint, and making new
-            connections through smart carpooling.
-          </p>
+          <br />
           <div className="flex flex-col space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
             <Button asChild size="lg" className="bg-primary text-lg font-semibold">
               <Link href="/find-ride">
