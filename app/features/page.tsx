@@ -89,7 +89,7 @@ export default function FeaturesPage() {
               variant="outline"
               className="border-2 border-white bg-transparent text-white hover:bg-white hover:text-primary"
             >
-              <Link href="/join-driver">Become a Driver</Link>
+              <Link href="/join-driver">Join as Driver</Link>
             </Button>
           </div>
         </div>

@@ -39,7 +39,7 @@ export default function AboutPage() {
               </div>
             </div>
             <div className="relative h-64 overflow-hidden rounded-lg md:h-96">
-              <Image src="/placeholder.svg?height=600&width=800" alt="POOL MATE team" fill className="object-cover" />
+              <Image src="logo.png" alt="POOL MATE team" fill className="object-cover" />
             </div>
           </div>
         </div>
@@ -117,28 +117,28 @@ export default function AboutPage() {
           </div>
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
             <TeamCard
-              name="Rahul Sharma"
+              name="Abhinaw Prakash"
               role="Founder & CEO"
-              image="/placeholder.svg?height=300&width=300"
+              image="Abhinaw.png"
               description="Former transportation executive with 15+ years of experience in urban mobility solutions."
             />
             <TeamCard
-              name="Priya Patel"
+              name="Atharv Kumar"
               role="Chief Technology Officer"
-              image="/placeholder.svg?height=300&width=300"
+              image="Atharv1.png"
               description="Tech innovator with expertise in building scalable platforms and AI-driven solutions."
             />
             <TeamCard
-              name="Vikram Singh"
-              role="Head of Operations"
-              image="/placeholder.svg?height=300&width=300"
+              name="Ayush Kumar & Adyant Singh"
+              role="Chief Operating Officer"
+              image="Ayush&Adyant.png"
               description="Operations expert focused on creating seamless user experiences and efficient processes."
             />
             <TeamCard
-              name="Ananya Desai"
-              role="Chief Safety Officer"
-              image="/placeholder.svg?height=300&width=300"
-              description="Former security consultant dedicated to ensuring the highest safety standards for all users."
+              name="Tanish Shitanshu"
+              role="Chief Financial Officer"
+              image="Tanish.png"
+              description="Oversees our company's financial strategy, planning, and management to ensure stability and growth."
             />
           </div>
         </div>

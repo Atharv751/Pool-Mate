@@ -55,9 +55,9 @@ export default function ContactPage() {
                   <div>
                     <h3 className="font-medium">Office Address</h3>
                     <p className="text-muted-foreground">
-                      123 Tech Park, Sector 62
+                      102, Dreamhouse Sunderone
                       <br />
-                      Noida, Uttar Pradesh 201301
+                      Jaipur, Rajasthan 303007
                       <br />
                       India
                     </p>

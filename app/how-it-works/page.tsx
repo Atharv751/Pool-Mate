@@ -27,14 +27,14 @@ export default function HowItWorksPage() {
               number={1}
               title="Sign Up & Verify Identity"
               description="Create your POOL MATE account and complete the identity verification process for safety and trust."
-              image="/placeholder.svg?height=300&width=500"
+              image="https://i.pinimg.com/736x/2a/cb/e6/2acbe692702a2e5825263fd6f3693c40.jpg"
               alt="Sign up process"
             />
             <StepCard
               number={2}
               title="Find a Ride"
               description="Enter your pickup location, destination, and preferred time to see available rides matching your route."
-              image="/placeholder.svg?height=300&width=500"
+              image="https://i.pinimg.com/736x/63/5f/3c/635f3c81ecfa87080a8327c47da7764b.jpg"
               alt="Find a ride"
               reverse
             />
@@ -42,14 +42,14 @@ export default function HowItWorksPage() {
               number={3}
               title="Book & Pay"
               description="Select your preferred ride, confirm your booking, and pay through our secure payment system."
-              image="/placeholder.svg?height=300&width=500"
+              image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYGmti4hahafN3EtG9tawuEC2eHqSM3kT46Q&s"
               alt="Book and pay"
             />
             <StepCard
               number={4}
               title="Travel Safely"
               description="Meet your driver at the pickup point, enjoy your ride with real-time tracking for added security."
-              image="/placeholder.svg?height=300&width=500"
+              image="https://t4.ftcdn.net/jpg/04/14/91/31/360_F_414913144_4yrNGOIQdz9jRX6RP0LG3Q4Q1YdtqdOl.jpg"
               alt="Travel safely"
               reverse
             />
@@ -57,7 +57,7 @@ export default function HowItWorksPage() {
               number={5}
               title="Rate & Review"
               description="After your ride, rate your experience and provide feedback to help maintain our high-quality service."
-              image="/placeholder.svg?height=300&width=500"
+              image="https://f.hubspotusercontent30.net/hubfs/5382131/ratings%20and%20reviews.jpg"
               alt="Rate and review"
             />
           </div>
@@ -73,14 +73,14 @@ export default function HowItWorksPage() {
               number={1}
               title="Sign Up as a Driver"
               description="Create your POOL MATE driver account and complete the comprehensive verification process."
-              image="/placeholder.svg?height=300&width=500"
+              image="https://i.pinimg.com/736x/2a/cb/e6/2acbe692702a2e5825263fd6f3693c40.jpg"
               alt="Driver sign up"
             />
             <StepCard
               number={2}
               title="Submit Documents"
               description="Upload your driver's license, vehicle registration, insurance, and other required documents for verification."
-              image="/placeholder.svg?height=300&width=500"
+              image="https://static.vecteezy.com/system/resources/previews/000/421/815/non_2x/vector-documents-icon.jpg"
               alt="Submit documents"
               reverse
             />
@@ -88,14 +88,14 @@ export default function HowItWorksPage() {
               number={3}
               title="Get Approved"
               description="Our team will review your documents and approve your profile, usually within 24-48 hours."
-              image="/placeholder.svg?height=300&width=500"
+              image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgROzQvQgueYrKTa0nu5KYjMiFEs4kWlw3qg&s"
               alt="Get approved"
             />
             <StepCard
               number={4}
               title="Offer Rides"
               description="Set your route, schedule, and available seats to start offering rides to passengers going your way."
-              image="/placeholder.svg?height=300&width=500"
+              image="https://i.pinimg.com/736x/63/5f/3c/635f3c81ecfa87080a8327c47da7764b.jpg"
               alt="Offer rides"
               reverse
             />
@@ -103,13 +103,13 @@ export default function HowItWorksPage() {
               number={5}
               title="Earn & Grow"
               description="Receive payments for your rides, build your rating, and grow your passenger network."
-              image="/placeholder.svg?height=300&width=500"
+              image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFcyDS5XS5Ohf2-nJL9EIOYDyqBOsN5a40PA&s"
               alt="Earn and grow"
             />
           </div>
           <div className="mt-8 text-center">
             <Button asChild size="lg">
-              <Link href="/join-driver">Become a Driver</Link>
+              <Link href="/join-driver">Join as Driver</Link>
             </Button>
           </div>
         </TabsContent>
@@ -161,7 +161,7 @@ export default function HowItWorksPage() {
               variant="outline"
               className="border-2 border-white bg-transparent text-white hover:bg-white hover:text-primary"
             >
-              <Link href="/join-driver">Become a Driver</Link>
+              <Link href="/join-driver">Join as Driver</Link>
             </Button>
           </div>
         </div>

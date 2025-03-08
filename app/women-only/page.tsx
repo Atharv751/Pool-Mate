@@ -36,7 +36,7 @@ export default function WomenOnlyPage() {
               </div>
             </div>
             <div className="relative h-64 overflow-hidden rounded-lg md:h-96">
-              <Image src="/placeholder.svg?height=600&width=800" alt="Women carpooling" fill className="object-cover" />
+              <Image src="https://media.istockphoto.com/id/1372484309/vector/women.jpg?s=612x612&w=0&k=20&c=82Ck61yGYQ1rYUE2z6YdFSpOPUwaISL27FzVDb_gWQU=" alt="Women carpooling" fill className="object-cover" />
             </div>
           </div>
         </div>

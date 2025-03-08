@@ -110,7 +110,7 @@ export default function Home() {
               variant="outline"
               className="border-2 border-white bg-transparent text-lg font-semibold text-white hover:bg-white hover:text-primary"
             >
-              <Link href="/join-driver">Become a Driver</Link>
+              <Link href="/join-driver">Join As a Driver</Link>
             </Button>
           </div>
         </div>

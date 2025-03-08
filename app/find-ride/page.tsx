@@ -17,8 +17,8 @@ export default function FindRidePage() {
 
       <Tabs defaultValue="instant" className="mb-8">
         <TabsList className="grid w-full grid-cols-2">
-          <TabsTrigger value="instant">Instant Ride</TabsTrigger>
-          <TabsTrigger value="scheduled">Scheduled Ride</TabsTrigger>
+          <TabsTrigger value="instant">Instant Pool</TabsTrigger>
+          <TabsTrigger value="scheduled">Schedule a Ride</TabsTrigger>
         </TabsList>
         <TabsContent value="instant">
           <Card>
