@@ -130,7 +130,7 @@ export default function AboutPage() {
             />
             <TeamCard
               name="Ayush Kumar & Adyant Singh"
-              role="Chief Operating Officer"
+              role="Chief Operating Officers"
               image="Ayush&Adyant.png"
               description="Operations expert focused on creating seamless user experiences and efficient processes."
             />
