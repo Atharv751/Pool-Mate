@@ -77,31 +77,31 @@ export default function AboutPage() {
       <section className="bg-muted py-16">
         <div className="container">
           <div className="mx-auto max-w-3xl text-center">
-            <h2 className="mb-4 text-3xl font-bold">Our Impact</h2>
+            <h2 className="mb-4 text-3xl font-bold">Our Aim</h2>
             <p className="mb-12 text-lg text-muted-foreground">
-              Since our launch, we've made significant strides in transforming urban commuting
+              After our launch, we will make significant strides in transforming urban commuting
             </p>
           </div>
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
             <ImpactCard
               number="50,000+"
               label="Active Users"
-              description="Commuters who regularly use POOL MATE for their daily travel needs"
+              description="Commuters who will regularly use POOL MATE for their daily travel needs"
             />
             <ImpactCard
               number="₹2.5 Cr+"
               label="User Savings"
-              description="Total amount saved by our users on transportation costs"
+              description="Total amount that will be saved by our users on transportation costs"
             />
             <ImpactCard
               number="500,000+"
-              label="Rides Completed"
+              label="Rides expected"
               description="Successful carpooling trips facilitated through our platform"
             />
             <ImpactCard
               number="120+ tons"
               label="CO₂ Reduced"
-              description="Carbon emissions prevented through shared rides"
+              description="Carbon emissions prevented through shared rides per week"
             />
           </div>
         </div>
@@ -120,13 +120,13 @@ export default function AboutPage() {
               name="Abhinaw Prakash"
               role="Founder & CEO"
               image="Abhinaw.png"
-              description="Former transportation executive with 15+ years of experience in urban mobility solutions."
+              description="Sets the overall direction and strategy for the company, responsible for the organization's smooth running and meeting business needs. "
             />
             <TeamCard
               name="Atharv Kumar"
               role="Chief Technology Officer"
               image="Atharv1.png"
-              description="Tech innovator with expertise in building scalable platforms and AI-driven solutions."
+              description="Oversees the company's technology infrastructure, ensuring it supports business goals and innovation. "
             />
             <TeamCard
               name="Ayush Kumar & Adyant Singh"
