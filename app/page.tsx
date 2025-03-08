@@ -17,7 +17,7 @@ export default function Home() {
             src="https://img.freepik.com/premium-photo/cartoon-car-drives-along-coastal-road-with-view-ocean_36682-150697.jpg"
             alt="Carpooling"
             fill
-            className="object-cover brightness-[0.7]"
+            className="object-cover brightness-[0.7"
             priority
           />
         </div>
