@@ -21,7 +21,7 @@ export default function Home() {
             priority
           />
         </div>
-        <div className="container relative z-10 flex h-full flex-col items-center justify-center text-center text-white">
+        <div className="container relative z-10 flex h-full flex-col items-center justify-center text-center text-black">
           <h1 className="mb-6 text-4xl font-bold leading-tight md:text-6xl">
             POOL MATE: Transforming 
             <br />
