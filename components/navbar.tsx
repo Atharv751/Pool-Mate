@@ -51,12 +51,11 @@ export default function Navbar() {
           <div className="hidden md:flex md:items-center md:gap-4">
             <ModeToggle />
             <LanguageToggle />
-            <Button asChild variant="outline" size="sm">
-              <Link href="/login">Log in</Link>
-            </Button>
-            <Button asChild size="sm">
-              <Link href="/signup">Sign up</Link>
-            </Button>
+            <Button asChild variant="outline">
+                      <Link href="/login" onClick={() => setIsOpen(false)}>
+                        Log Out
+                      </Link>
+                    </Button>
           </div>
           <Sheet open={isOpen} onOpenChange={setIsOpen}>
             <SheetTrigger asChild className="md:hidden">
@@ -93,12 +92,7 @@ export default function Navbar() {
                   <div className="flex flex-col gap-2">
                     <Button asChild variant="outline">
                       <Link href="/login" onClick={() => setIsOpen(false)}>
-                        Log in
-                      </Link>
-                    </Button>
-                    <Button asChild>
-                      <Link href="/signup" onClick={() => setIsOpen(false)}>
-                        Sign up
+                        Log Out
                       </Link>
                     </Button>
                   </div>

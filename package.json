@@ -43,9 +43,12 @@
     "cmdk": "1.0.4",
     "date-fns": "^3.6.0",
     "embla-carousel-react": "8.5.1",
+    "firebase": "^11.6.0",
     "input-otp": "1.4.1",
+    "leaflet": "^1.9.4",
     "lucide-react": "^0.454.0",
     "next": "^14.2.24",
+    "next-auth": "^4.24.11",
     "next-themes": "latest",
     "react": "^18",
     "react-day-picker": "8.10.1",
@@ -60,6 +63,7 @@
     "zod": "^3.24.1"
   },
   "devDependencies": {
+    "@types/leaflet": "^1.9.17",
     "@types/node": "^22",
     "@types/react": "^18",
     "@types/react-dom": "^18",
